@@ -56,9 +56,9 @@ def RandomLetter():
 
 
 while quit == False:
-    spil = ["(TAL-JAGT = 1)", "(BOGSTAV-JAGT = 2)"]
+    spil = ["[TAL-JAGT = 1]", "[BOGSTAV-JAGT = 2]"]
     print("Alle spil:")
-    print(spil)
+    print(" ".join(spil))
     valg = input("Vaelg et spil: ")
     print("")
     if valg == "1":
