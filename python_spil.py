@@ -1,8 +1,10 @@
 import random
+import time
 alfabet = "abcdefghijklmnopqrstuvwxyz"
+quit = False
 
 def RandomNumber():
-    print("gaet et nummer mellem 1 og 100.")
+    print("Gaet et nummer mellem 1 og 100.")
     random_number = random.randint(1, 100)
     fundet = False
     gaet = 0
@@ -10,6 +12,7 @@ def RandomNumber():
         bruger_gaet = input("Dit gaet: ")
         i = int(bruger_gaet)
         if i == random_number:
+            print("")
             print("Rigtigt!")
             fundet = True
             gaet += 1
@@ -21,9 +24,7 @@ def RandomNumber():
             print("Lavere...")
             gaet += 1
     print("Tak for at spille")
-
-
-
+    print("")
 
 
 def RandomLetter():
@@ -35,7 +36,9 @@ def RandomLetter():
         bruger_gaet = input("Dit gaet: ")
         i = (bruger_gaet)
         if i == random_letter:
+            print("")
             print("Rigtigt!")
+            print("")
             fundet = True
             gaet += 1
             print("antal gaet: " + str(gaet))
@@ -46,21 +49,26 @@ def RandomLetter():
             print("Laengere frem...")
             gaet += 1
     print("Tak for at spille")
+    print("")
 
 
-quit = False
+
+
 
 while quit == False:
-    spil = "[TAL = 1] [BOGSTAV = 2]"
+    spil = ["(TAL-JAGT = 1)", "(BOGSTAV-JAGT = 2)"]
     print("Alle spil:")
     print(spil)
     valg = input("Vaelg et spil: ")
-    if valg == "1" or valg == "4":
+    print("")
+    if valg == "1":
         RandomNumber()
-    elif valg == "2" or valg == "3":
+    elif valg == "2":
         RandomLetter()
-    quit = input("Vil du proeve igen? ")
-    if quit == "nej":
+
+
+    quit = input("Vil du spille et nyt spil? j/n ")
+    if quit == "n":
         quit = True
-    else:
+    elif quit == "j":
         quit = False
