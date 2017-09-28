@@ -1,7 +1,7 @@
 import random
 import time
 alfabet = "abcdefghijklmnopqrstuvwxyz"
-quit = False
+quit = True
 
 def RandomNumber():
     print("Gaet et nummer mellem 1 og 100.")
@@ -55,7 +55,7 @@ def RandomLetter():
 
 
 
-while quit == False:
+while quit == True:
     spil = ["[TAL-JAGT = 1]", "[BOGSTAV-JAGT = 2]"]
     print("Alle spil:")
     print(" ".join(spil))
@@ -69,6 +69,6 @@ while quit == False:
 
     quit = input("Vil du spille et nyt spil? j/n ")
     if quit == "n":
-        quit = True
-    elif quit == "j":
         quit = False
+    elif quit == "j":
+        quit = True
