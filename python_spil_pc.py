@@ -114,12 +114,19 @@ def menu():
 
 
 quit = True
+user_quit = input("\nVil du spille et nyt spil? j/n ")
+
+
+def UserQuit(n):
+    if n == "n":
+        quit = False
+    elif n == "j":
+        quit = True
+    else:
+        UserQuit(user_quit)
+    return quit
 
 
 while quit is True:
     menu()
-    user_quit = input("\nVil du spille et nyt spil? j/n ")
-    if user_quit == "n":
-        quit = False
-    elif user_quit == "j":
-        quit = True
+    UserQuit(user_quit)
