@@ -23,9 +23,7 @@ def length():
     password_letters = int(input("Letters: "))
     while password_letters > 128:
         password_letters = int(input("Letters: "))
-    password_numbers = int(input("Numbers: "))
-    while password_numbers > 128:
-        password_numbers = int(input("Numbers: "))
+    password_numbers = 128 - int(password_letters)
     generator(password_letters, password_numbers)
 
 quit = True
