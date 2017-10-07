@@ -15,18 +15,33 @@ def generator(l, m):
     for z in range(len(password)):
         randomchar = random.choice(password)
         password2.append(randomchar)
-    print("".join(password2))
-
+    print("\n", "".join(password2))
 
 
 def length():
-    password_letters = int(input("Letters: "))
-    while password_letters > 128:
-        password_letters = int(input("Letters: "))
-    password_numbers = 128 - int(password_letters)
+    password_letters = input("Characters: ")
+    passletboo = True
+    try:
+        password_letters = int(password_letters)
+    except:
+        passletboo = False
+        return passletboo
+    if not passletboo:
+        password_letters = input("Characters: ")
+    password_numbers = input("Numbers: ")
+    passnumboo = True
+    try:
+        password_numbers = int(password_numbers)
+    except:
+        passnumboo = False
+        return passnumboo
+    if not passnumboo:
+        password_numbers = input("Numbers: ")
     generator(password_letters, password_numbers)
 
+
 quit = True
+
 
 def UserQuit():
     user_quit = input("\nTry again? y/n: ")
@@ -38,6 +53,6 @@ def UserQuit():
 
 
 while quit:
-    print("Generate a password.\nSet your number of characters,\nand numbers.\n")
+    print("Generate a password.\nSet your number of characters,\nand numbers.      (must be an integer)\n")
     length()
     UserQuit()
