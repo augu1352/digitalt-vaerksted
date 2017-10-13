@@ -125,3 +125,4 @@ while quit is True:
     elif user_quit == "j":
         quit = True
         return quit
+    return quit
