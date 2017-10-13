@@ -102,13 +102,13 @@ def menu():
     print("=" * 120)
     print("Alle spil:")
     print(" ".join(spil))
-    valg = str(input("Vaelg et spil: "))
+    valg = input("Vaelg et spil: ")
     print("")
-    if valg == "1":
+    if valg == 1:
         RandomNumber()
-    elif valg == "2":
+    elif valg == 2:
         RandomLetter()
-    elif valg == "3":
+    elif valg == 3:
         Saenkeslagskibe()
     else:
         menu()
