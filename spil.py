@@ -124,7 +124,6 @@ def UserQuit():
         main()
     else:
         UserQuit()
-    return quit
 
 
 def main():
