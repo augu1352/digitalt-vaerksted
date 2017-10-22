@@ -19,24 +19,12 @@ def generator(l, m):
 
 
 def length():
-    password_letters = input("Characters: ")
-    passletboo = True
-    try:
-        password_letters = int(password_letters)
-    except:
-        passletboo = False
-        return passletboo
-    if not passletboo:
-        password_letters = input("Characters: ")
-    password_numbers = input("Numbers: ")
-    passnumboo = True
-    try:
-        password_numbers = int(password_numbers)
-    except:
-        passnumboo = False
-        return passnumboo
-    if not passnumboo:
-        password_numbers = input("Numbers: ")
+    password_letters = int(input("Characters: "))
+    while type(password_letters) != int:
+        password_letters = int(input("Characters: "))
+    password_numbers = int(input("Numbers: "))
+    while type(password_numbers) != int:
+        password_numbers = int(input("Numbers: "))
     generator(password_letters, password_numbers)
 
 
