@@ -8,7 +8,6 @@ class RentalPlace(object):
         self.carsInStock = []
         self.name = name
         self.cap = cap
-        self.placeId = 0
         c.execute("INSERT INTO PLACE(name, cap) VALUES(?, ?)", (self.name, self.cap))
 
     def get_name(self):
@@ -22,12 +21,6 @@ class RentalPlace(object):
 
     def set_cap(self, newCap):
         self.cap = newCap
-
-    def get_placeId(self):
-        return self.placeId
-
-    def set_placeId(self, newPlaceId):
-        placeId = newPlaceId
 
     def get_carsInStock(self):
         return self.carsInStock

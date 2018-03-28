@@ -1,10 +1,14 @@
+import sqlite3
+conn = sqlite3.connect("carRental.db")
+c = conn.cursor()
+
+
 class Car(object):
     def __init__(self, color, brand, model, numPlate):
         self.color = color
         self.brand = brand
         self.model = model
         self.numPlate = numPlate
-        self.carId = 0
 
     def get_color(self):
         return self.color
@@ -31,7 +35,5 @@ class Car(object):
         self.numPlate = newNumPlate
 
     def get_carId(self):
+        x = c.execute("SELECT carId FROM CAR")
         return self.carId
-
-    def set_carId(self, newCarId):
-        self.carId = newCarId
