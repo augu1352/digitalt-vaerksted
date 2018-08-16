@@ -9,7 +9,7 @@ class Student:
     def set_key(self, newKey):
         self.key = newKey
 
-    def get_studentName(self):
+    def get_name(self):
         return self.studentName
 
     def set_name(self, newStudentName):

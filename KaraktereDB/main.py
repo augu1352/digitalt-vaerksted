@@ -16,4 +16,4 @@ fag4 = Fag(4, "Programmering")
 fag5 = Fag(5, "Fysik")
 
 
-print(fag1.get_fagName)
+print(student4.get_name())
