@@ -1,3 +1,5 @@
+from math import *
+
 class Generator:
     def __init__(self):
         pass
@@ -5,7 +7,7 @@ class Generator:
         Pnumbers = []
         for n in range(1, int(amount) + 1):
             isPrime = True
-            for i in range(2, n):
+            for i in range(2, int(sqrt(n))):
                 if i == n or i == 1:
                     break
                 if n % i == 0:
@@ -17,5 +19,4 @@ class Generator:
         return Pnumbers
 
 g = Generator()
-print(g.findPrimes(1000000))
-
+print(g.findPrimes(1000000000))
